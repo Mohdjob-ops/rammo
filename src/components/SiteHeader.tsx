@@ -32,7 +32,7 @@ export default function SiteHeader({ activePage }: SiteHeaderProps) {
             pressed && styles.pressed,
           ]}
         >
-          <Text style={styles.logo}>Romando Resturant & Coffe</Text>
+          <Text style={styles.logo}>Romano Resturant & Coffe</Text>
           <Text style={styles.tagline}>
             Fresh food, trusted service
           </Text>

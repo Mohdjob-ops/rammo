@@ -93,7 +93,7 @@ export default function ContactPage() {
     }
 
     const whatsappMessage = [
-      'Hello Romando Restaurant & Coffee,',
+      'Hello Romano Restaurant & Coffee,',
       '',
       `Name: ${cleanName}`,
       `Customer contact: ${cleanContact}`,
@@ -151,7 +151,7 @@ export default function ContactPage() {
           ]}
         >
           <Text style={styles.logo}>
-            Romando <Text style={styles.logoBlue}>Restaurant & Coffee</Text>
+            Romano <Text style={styles.logoBlue}>Restaurant & Coffee</Text>
           </Text>
 
           <Text style={styles.tagline}>Fresh food, trusted service</Text>
@@ -214,7 +214,7 @@ export default function ContactPage() {
         <Text style={styles.eyebrow}>WE ARE HERE TO HELP</Text>
 
         <Text style={styles.title}>
-          Contact Romando Restaurant & Coffee
+          Contact Romano Restaurant & Coffee
         </Text>
 
         <Text style={styles.subtitle}>
@@ -396,7 +396,7 @@ export default function ContactPage() {
 
       <View style={styles.footer}>
         <Text style={styles.footerLogo}>
-          Romando <Text style={styles.logoBlue}>Restaurant & Coffee</Text>
+          Romano <Text style={styles.logoBlue}>Restaurant & Coffee</Text>
         </Text>
 
         <Text style={styles.footerText}>

@@ -15,7 +15,7 @@ export default function AboutPage() {
     >
       <View style={styles.header}>
         <Pressable
-          accessibilityLabel="Romando Restaurant and Coffee home"
+          accessibilityLabel="Romano Restaurant and Coffee home"
           accessibilityRole="link"
           onPress={() => router.push('/')}
           style={({ pressed }) => [
@@ -25,7 +25,7 @@ export default function AboutPage() {
           ]}
         >
           <Text style={styles.logo}>
-            Romando{' '}
+            Romano{' '}
             <Text style={styles.logoBlue}>Restaurant & Coffee</Text>
           </Text>
           <Text style={styles.tagline}>Fresh food, trusted service</Text>
@@ -86,7 +86,7 @@ export default function AboutPage() {
       <View style={styles.hero}>
         <Text style={styles.eyebrow}>FRESH • TRUSTED • LOCAL</Text>
         <Text style={styles.title}>
-          About Romando Restaurant & Coffee
+          About Romano Restaurant & Coffee
         </Text>
         <Text style={styles.subtitle}>
           We prepare delicious food using fresh ingredients and serve every
@@ -104,7 +104,7 @@ export default function AboutPage() {
             </Text>
 
             <Text style={styles.paragraph}>
-              Romando Restaurant & Coffee was created to provide fresh, healthy
+              Romano Restaurant & Coffee was created to provide fresh, healthy
               and delicious meals in a welcoming environment. We believe
               restaurant food should be enjoyable, reliable and prepared with
               quality ingredients.
@@ -184,7 +184,7 @@ export default function AboutPage() {
 
       <View style={styles.footer}>
         <Text style={styles.footerLogo}>
-          Romando{' '}
+          Romano{' '}
           <Text style={styles.logoBlue}>Restaurant & Coffee</Text>
         </Text>
 

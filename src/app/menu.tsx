@@ -76,7 +76,7 @@ export default function MenuPage() {
             pressed && styles.pressed,
           ]}
         >
-          <Text style={styles.logo}>Romando Restaurant & Cafe</Text>
+          <Text style={styles.logo}>Romano Restaurant & Cafe</Text>
           <Text style={styles.logoSubtitle}>
             Fresh food, trusted service
           </Text>
@@ -173,7 +173,7 @@ export default function MenuPage() {
         </Text>
 
         <Text style={styles.callToActionText}>
-          Contact Romando Restaurant & Cafe and we will help you.
+          Contact Romano Restaurant & Cafe and we will help you.
         </Text>
 
         <Pressable
@@ -191,7 +191,7 @@ export default function MenuPage() {
 
       <View style={styles.footer}>
         <Text style={styles.footerText}>
-          © 2026 Romando Restaurant & Cafe
+          © 2026 Romano Restaurant & Cafe
         </Text>
       </View>
     </ScrollView>

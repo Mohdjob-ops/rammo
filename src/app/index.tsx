@@ -26,7 +26,7 @@ export default function HomeScreen() {
           <Text style={styles.title}>Fresh food made with care</Text>
 
           <Text style={styles.description}>
-            Welcome to Romando Restaurant & Coffee. Enjoy delicious meals
+            Welcome to Romano Restaurant & Coffee. Enjoy delicious meals
             prepared with fresh ingredients in a clean and welcoming
             restaurant.
           </Text>
@@ -104,7 +104,7 @@ export default function HomeScreen() {
 
       <View style={styles.footer}>
         <Text style={styles.footerLogo}>
-          Romando Restaurant & Coffee
+          Romano Restaurant & Coffee
         </Text>
 
         <Text style={styles.footerText}>
