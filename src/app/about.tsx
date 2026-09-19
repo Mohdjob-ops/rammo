@@ -14,35 +14,69 @@ export default function AboutPage() {
       contentContainerStyle={styles.pageContent}
     >
       <View style={styles.header}>
-        <Pressable onPress={() => router.push('/')} style={styles.brand}>
+        <Pressable
+          accessibilityLabel="Romando Restaurant and Coffee home"
+          accessibilityRole="link"
+          onPress={() => router.push('/')}
+          style={({ pressed }) => [
+            styles.brand,
+            styles.webPointer,
+            pressed && styles.pressed,
+          ]}
+        >
           <Text style={styles.logo}>
-            Ega<Text style={styles.logoBlue}>Rest</Text>
+            Romando{' '}
+            <Text style={styles.logoBlue}>Restaurant & Coffee</Text>
           </Text>
           <Text style={styles.tagline}>Fresh food, trusted service</Text>
         </Pressable>
 
         <View style={styles.navigation}>
           <Pressable
+            accessibilityRole="link"
             onPress={() => router.push('/')}
-            style={styles.navigationButton}
+            style={({ pressed }) => [
+              styles.navigationButton,
+              styles.webPointer,
+              pressed && styles.pressed,
+            ]}
           >
             <Text style={styles.navigationText}>Home</Text>
           </Pressable>
 
           <Pressable
+            accessibilityRole="link"
             onPress={() => router.push('/menu')}
-            style={styles.navigationButton}
+            style={({ pressed }) => [
+              styles.navigationButton,
+              styles.webPointer,
+              pressed && styles.pressed,
+            ]}
           >
             <Text style={styles.navigationText}>Menu</Text>
           </Pressable>
 
-          <Pressable style={[styles.navigationButton, styles.activeButton]}>
+          <Pressable
+            accessibilityRole="link"
+            accessibilityState={{ selected: true }}
+            style={({ pressed }) => [
+              styles.navigationButton,
+              styles.activeButton,
+              styles.webPointer,
+              pressed && styles.pressed,
+            ]}
+          >
             <Text style={styles.activeText}>About</Text>
           </Pressable>
 
           <Pressable
+            accessibilityRole="link"
             onPress={() => router.push('/contact')}
-            style={styles.navigationButton}
+            style={({ pressed }) => [
+              styles.navigationButton,
+              styles.webPointer,
+              pressed && styles.pressed,
+            ]}
           >
             <Text style={styles.navigationText}>Contact</Text>
           </Pressable>
@@ -51,7 +85,9 @@ export default function AboutPage() {
 
       <View style={styles.hero}>
         <Text style={styles.eyebrow}>FRESH • TRUSTED • LOCAL</Text>
-        <Text style={styles.title}>About EgaRest</Text>
+        <Text style={styles.title}>
+          About Romando Restaurant & Coffee
+        </Text>
         <Text style={styles.subtitle}>
           We prepare delicious food using fresh ingredients and serve every
           customer with care.
@@ -62,14 +98,16 @@ export default function AboutPage() {
         <View style={styles.storyCard}>
           <View style={styles.storyText}>
             <Text style={styles.sectionLabel}>OUR STORY</Text>
+
             <Text style={styles.sectionTitle}>
               Good food brings people together
             </Text>
 
             <Text style={styles.paragraph}>
-              EgaRest was created to provide fresh, healthy and delicious meals
-              in a welcoming environment. We believe restaurant food should be
-              enjoyable, reliable and prepared with quality ingredients.
+              Romando Restaurant & Coffee was created to provide fresh, healthy
+              and delicious meals in a welcoming environment. We believe
+              restaurant food should be enjoyable, reliable and prepared with
+              quality ingredients.
             </Text>
 
             <Text style={styles.paragraph}>
@@ -79,8 +117,13 @@ export default function AboutPage() {
             </Text>
 
             <Pressable
+              accessibilityRole="link"
               onPress={() => router.push('/menu')}
-              style={styles.primaryButton}
+              style={({ pressed }) => [
+                styles.primaryButton,
+                styles.webPointer,
+                pressed && styles.pressed,
+              ]}
             >
               <Text style={styles.primaryButtonText}>Explore Our Menu</Text>
             </Pressable>
@@ -102,7 +145,9 @@ export default function AboutPage() {
             <View style={styles.iconCircle}>
               <Text style={styles.valueIcon}>🌿</Text>
             </View>
+
             <Text style={styles.valueTitle}>Fresh Ingredients</Text>
+
             <Text style={styles.valueText}>
               We select quality ingredients to prepare fresh and flavorful
               meals.
@@ -113,7 +158,9 @@ export default function AboutPage() {
             <View style={styles.iconCircle}>
               <Text style={styles.valueIcon}>🤝</Text>
             </View>
+
             <Text style={styles.valueTitle}>Trusted Service</Text>
+
             <Text style={styles.valueText}>
               Every customer receives friendly, respectful and dependable
               service.
@@ -124,7 +171,9 @@ export default function AboutPage() {
             <View style={styles.iconCircle}>
               <Text style={styles.valueIcon}>💙</Text>
             </View>
+
             <Text style={styles.valueTitle}>Customer Care</Text>
+
             <Text style={styles.valueText}>
               Your comfort and satisfaction are at the heart of everything we
               do.
@@ -135,8 +184,10 @@ export default function AboutPage() {
 
       <View style={styles.footer}>
         <Text style={styles.footerLogo}>
-          Ega<Text style={styles.logoBlue}>Rest</Text>
+          Romando{' '}
+          <Text style={styles.logoBlue}>Restaurant & Coffee</Text>
         </Text>
+
         <Text style={styles.footerText}>
           Fresh food, trusted service.
         </Text>
@@ -170,8 +221,8 @@ const styles = StyleSheet.create({
   },
   logo: {
     color: '#174D35',
-    fontSize: 32,
-    lineHeight: 36,
+    fontSize: 27,
+    lineHeight: 34,
     fontWeight: '900',
   },
   logoBlue: {
@@ -375,12 +426,19 @@ const styles = StyleSheet.create({
   },
   footerLogo: {
     color: '#FFFFFF',
-    fontSize: 27,
+    fontSize: 24,
     fontWeight: '900',
+    textAlign: 'center',
   },
   footerText: {
     color: '#CFE0D5',
     fontSize: 14,
     marginTop: 6,
+  },
+  webPointer: {
+    cursor: 'pointer',
+  },
+  pressed: {
+    opacity: 0.75,
   },
 });

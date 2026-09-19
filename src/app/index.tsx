@@ -26,13 +26,15 @@ export default function HomeScreen() {
           <Text style={styles.title}>Fresh food made with care</Text>
 
           <Text style={styles.description}>
-            Welcome to EgaRest. Enjoy delicious meals prepared with fresh
-            ingredients in a clean and welcoming restaurant.
+            Welcome to Romando Restaurant & Coffee. Enjoy delicious meals
+            prepared with fresh ingredients in a clean and welcoming
+            restaurant.
           </Text>
 
           <View style={styles.buttonRow}>
             <Link href="/menu" asChild>
               <Pressable
+                accessibilityLabel="Explore the menu"
                 accessibilityRole="link"
                 style={({ pressed }) => [
                   styles.primaryButton,
@@ -46,6 +48,7 @@ export default function HomeScreen() {
 
             <Link href="/contact" asChild>
               <Pressable
+                accessibilityLabel="Order now"
                 accessibilityRole="link"
                 style={({ pressed }) => [
                   styles.secondaryButton,
@@ -100,7 +103,10 @@ export default function HomeScreen() {
       </View>
 
       <View style={styles.footer}>
-        <Text style={styles.footerLogo}>EgaRest</Text>
+        <Text style={styles.footerLogo}>
+          Romando Restaurant & Coffee
+        </Text>
+
         <Text style={styles.footerText}>
           Fresh food • Trusted service • Happy customers
         </Text>
@@ -304,6 +310,7 @@ const styles = StyleSheet.create({
     color: '#ffffff',
     fontSize: 23,
     fontWeight: '900',
+    textAlign: 'center',
   },
 
   footerText: {
