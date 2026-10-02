@@ -26,9 +26,8 @@ export default function HomeScreen() {
           <Text style={styles.title}>Fresh food made with care</Text>
 
           <Text style={styles.description}>
-            Welcome to Romano Restaurant & Coffee. Enjoy delicious meals
-            prepared with fresh ingredients in a clean and welcoming
-            restaurant.
+            Welcome to Romano Kohl. Enjoy delicious meals prepared with fresh
+            ingredients in a clean and welcoming restaurant.
           </Text>
 
           <View style={styles.buttonRow}>
@@ -56,7 +55,7 @@ export default function HomeScreen() {
                   pressed && styles.pressed,
                 ]}
               >
-                <Text style={styles.secondaryButtonText}>Order Now</Text>
+                <Text style={styles.secondaryButtonText}>Book a Table</Text>
               </Pressable>
             </Link>
           </View>
@@ -103,9 +102,7 @@ export default function HomeScreen() {
       </View>
 
       <View style={styles.footer}>
-        <Text style={styles.footerLogo}>
-          Romano Restaurant & Coffee
-        </Text>
+        <Text style={styles.footerLogo}>Romano Kohl</Text>
 
         <Text style={styles.footerText}>
           Fresh food • Trusted service • Happy customers
@@ -176,9 +173,13 @@ const styles = StyleSheet.create({
 
   primaryButton: {
     backgroundColor: '#0284c7',
-    paddingHorizontal: 25,
+    minWidth: 170,
+    paddingHorizontal: 22,
     paddingVertical: 15,
-    borderRadius: 10,
+    borderRadius: 12,
+    alignItems: 'center',
+    justifyContent: 'center',
+    boxShadow: '0px 8px 18px rgba(2, 132, 199, 0.18)',
   },
 
   primaryButtonText: {
@@ -189,11 +190,15 @@ const styles = StyleSheet.create({
 
   secondaryButton: {
     backgroundColor: '#ffffff',
+    minWidth: 170,
     borderWidth: 2,
     borderColor: '#16a34a',
-    paddingHorizontal: 25,
+    paddingHorizontal: 22,
     paddingVertical: 13,
-    borderRadius: 10,
+    borderRadius: 12,
+    alignItems: 'center',
+    justifyContent: 'center',
+    boxShadow: '0px 8px 18px rgba(22, 163, 74, 0.10)',
   },
 
   secondaryButtonText: {
@@ -212,13 +217,7 @@ const styles = StyleSheet.create({
     borderRadius: 28,
     borderWidth: 1,
     borderColor: '#bde3cf',
-    shadowColor: '#14532d',
-    shadowOpacity: 0.14,
-    shadowRadius: 18,
-    shadowOffset: {
-      width: 0,
-      height: 8,
-    },
+    boxShadow: '0px 8px 18px rgba(20, 83, 45, 0.14)',
     elevation: 4,
   },
 
@@ -277,9 +276,11 @@ const styles = StyleSheet.create({
     maxWidth: 340,
     backgroundColor: '#ffffff',
     padding: 28,
-    borderRadius: 18,
+    borderRadius: 20,
     borderWidth: 1,
     borderColor: '#dceee5',
+    boxShadow: '0px 10px 24px rgba(15, 61, 46, 0.06)',
+    elevation: 3,
   },
 
   cardIcon: {
@@ -304,6 +305,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingHorizontal: 25,
     paddingVertical: 30,
+    marginTop: 12,
   },
 
   footerLogo: {

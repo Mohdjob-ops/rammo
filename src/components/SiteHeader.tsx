@@ -1,5 +1,6 @@
 import { Link } from 'expo-router';
 import {
+  Image,
   Platform,
   Pressable,
   StyleSheet,
@@ -25,6 +26,7 @@ export default function SiteHeader({ activePage }: SiteHeaderProps) {
     <View style={styles.header}>
       <Link href="/" asChild>
         <Pressable
+          accessibilityLabel="Romano Kohl home"
           accessibilityRole="link"
           style={({ pressed }) => [
             styles.brandButton,
@@ -32,40 +34,37 @@ export default function SiteHeader({ activePage }: SiteHeaderProps) {
             pressed && styles.pressed,
           ]}
         >
-          <Text style={styles.logo}>Romano Resturant & Coffe</Text>
-          <Text style={styles.tagline}>
-            Fresh food, trusted service
-          </Text>
+          <Image
+            source={require('../../assets/images/romano-logo.jpeg')}
+            style={styles.logoImage}
+            resizeMode="contain"
+          />
         </Pressable>
       </Link>
 
       <View style={styles.navigation}>
-        {navigationItems.map((item) => {
-          const active = activePage === item.name;
-
-          return (
-            <Link key={item.name} href={item.href} asChild>
-              <Pressable
-                accessibilityRole="link"
-                style={({ pressed }) => [
-                  styles.navigationButton,
-                  styles.webPointer,
-                  active && styles.activeNavigationButton,
-                  pressed && styles.pressed,
+        {navigationItems.map((item) => (
+          <Link key={item.name} href={item.href} asChild>
+            <Pressable
+              accessibilityRole="link"
+              style={({ pressed }) => [
+                styles.navigationButton,
+                styles.webPointer,
+                activePage === item.name && styles.activeNavigationButton,
+                pressed && styles.pressed,
+              ]}
+            >
+              <Text
+                style={[
+                  styles.navigationText,
+                  activePage === item.name && styles.activeNavigationText,
                 ]}
               >
-                <Text
-                  style={[
-                    styles.navigationText,
-                    active && styles.activeNavigationText,
-                  ]}
-                >
-                  {item.label}
-                </Text>
-              </Pressable>
-            </Link>
-          );
-        })}
+                {item.label}
+              </Text>
+            </Pressable>
+          </Link>
+        ))}
       </View>
     </View>
   );
@@ -73,44 +72,32 @@ export default function SiteHeader({ activePage }: SiteHeaderProps) {
 
 const styles = StyleSheet.create({
   header: {
-    position: 'relative',
-    zIndex: 9999,
-    elevation: 20,
     width: '100%',
-    minHeight: 100,
-    backgroundColor: '#ffffff',
-    paddingHorizontal: 42,
-    paddingVertical: 20,
+    minHeight: 96,
+    paddingHorizontal: 26,
+    paddingVertical: 12,
+    backgroundColor: '#FFFFFF',
+    borderBottomWidth: 1,
+    borderBottomColor: '#E7EEF4',
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
     flexWrap: 'wrap',
-    gap: 20,
-    borderBottomWidth: 1,
-    borderBottomColor: '#e4ebe7',
+    gap: 12,
+    boxShadow: '0px 2px 12px rgba(15, 23, 42, 0.04)',
   },
 
   brandButton: {
+    justifyContent: 'center',
     alignItems: 'flex-start',
   },
 
-  logo: {
-    color: '#0b4f7c',
-    fontSize: 30,
-    fontWeight: '900',
-    letterSpacing: 0.5,
-  },
-
-  tagline: {
-    color: '#34704d',
-    fontSize: 15,
-    fontWeight: '600',
-    marginTop: 2,
+  logoImage: {
+    width: 220,
+    height: 74,
   },
 
   navigation: {
-    position: 'relative',
-    zIndex: 10000,
     flexDirection: 'row',
     alignItems: 'center',
     flexWrap: 'wrap',
@@ -118,30 +105,30 @@ const styles = StyleSheet.create({
   },
 
   navigationButton: {
-    minHeight: 46,
-    paddingHorizontal: 20,
-    paddingVertical: 12,
-    borderRadius: 16,
-    alignItems: 'center',
-    justifyContent: 'center',
+    paddingHorizontal: 14,
+    paddingVertical: 9,
+    borderRadius: 10,
   },
 
   activeNavigationButton: {
-    backgroundColor: '#168ee0',
+    backgroundColor: '#EAF4FF',
+    borderWidth: 1,
+    borderColor: '#CFE4FF',
   },
 
   navigationText: {
-    color: '#17221c',
-    fontSize: 17,
+    color: '#1F2937',
+    fontSize: 15,
     fontWeight: '700',
+    letterSpacing: 0.2,
   },
 
   activeNavigationText: {
-    color: '#ffffff',
+    color: '#0F4C81',
   },
 
   pressed: {
-    opacity: 0.7,
+    opacity: 0.72,
   },
 
   webPointer: Platform.select({

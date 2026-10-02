@@ -18,6 +18,7 @@ type FormStatus = {
 } | null;
 
 const WHATSAPP_NUMBER = '251908659988';
+const RESTAURANT_EMAIL = 'hello@romanoethiopia.com';
 
 export default function ContactPage() {
   const [name, setName] = useState('');
@@ -93,7 +94,7 @@ export default function ContactPage() {
     }
 
     const whatsappMessage = [
-      'Hello Romano Restaurant & Coffee,',
+      'Hello Romano Kohl,',
       '',
       `Name: ${cleanName}`,
       `Customer contact: ${cleanContact}`,
@@ -150,9 +151,7 @@ export default function ContactPage() {
             pressed && styles.pressed,
           ]}
         >
-          <Text style={styles.logo}>
-            Romano <Text style={styles.logoBlue}>Restaurant & Coffee</Text>
-          </Text>
+          <Text style={styles.logo}>Romano Kohl</Text>
 
           <Text style={styles.tagline}>Fresh food, trusted service</Text>
         </Pressable>
@@ -213,9 +212,7 @@ export default function ContactPage() {
       <View style={styles.hero}>
         <Text style={styles.eyebrow}>WE ARE HERE TO HELP</Text>
 
-        <Text style={styles.title}>
-          Contact Romano Restaurant & Coffee
-        </Text>
+        <Text style={styles.title}>Contact Romano Kohl</Text>
 
         <Text style={styles.subtitle}>
           Have a question, reservation request or feedback? Send us a message.
@@ -273,7 +270,7 @@ export default function ContactPage() {
                 <Text style={styles.detailTitle}>Email Us</Text>
 
                 <Text style={styles.detailValue}>
-                  Add your restaurant email address
+                  {RESTAURANT_EMAIL}
                 </Text>
               </View>
             </View>
@@ -395,9 +392,7 @@ export default function ContactPage() {
       </View>
 
       <View style={styles.footer}>
-        <Text style={styles.footerLogo}>
-          Romano <Text style={styles.logoBlue}>Restaurant & Coffee</Text>
-        </Text>
+        <Text style={styles.footerLogo}>Romano Kohl</Text>
 
         <Text style={styles.footerText}>
           Fresh food, trusted service.
@@ -577,13 +572,8 @@ const styles = StyleSheet.create({
     borderColor: '#DDE7E0',
     borderRadius: 26,
     padding: 32,
-    shadowColor: '#153F2C',
-    shadowOpacity: 0.08,
-    shadowRadius: 18,
-    shadowOffset: {
-      width: 0,
-      height: 8,
-    },
+    boxShadow: '0px 8px 18px rgba(21, 63, 44, 0.08)',
+    elevation: 4,
   },
   formTitle: {
     color: '#123D2A',

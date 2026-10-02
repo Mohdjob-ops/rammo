@@ -15,7 +15,7 @@ export default function AboutPage() {
     >
       <View style={styles.header}>
         <Pressable
-          accessibilityLabel="Romano Restaurant and Coffee home"
+          accessibilityLabel="Romano Kohl home"
           accessibilityRole="link"
           onPress={() => router.push('/')}
           style={({ pressed }) => [
@@ -24,10 +24,7 @@ export default function AboutPage() {
             pressed && styles.pressed,
           ]}
         >
-          <Text style={styles.logo}>
-            Romano{' '}
-            <Text style={styles.logoBlue}>Restaurant & Coffee</Text>
-          </Text>
+          <Text style={styles.logo}>Romano Kohl</Text>
           <Text style={styles.tagline}>Fresh food, trusted service</Text>
         </Pressable>
 
@@ -85,9 +82,7 @@ export default function AboutPage() {
 
       <View style={styles.hero}>
         <Text style={styles.eyebrow}>FRESH • TRUSTED • LOCAL</Text>
-        <Text style={styles.title}>
-          About Romano Restaurant & Coffee
-        </Text>
+        <Text style={styles.title}>About Romano Kohl</Text>
         <Text style={styles.subtitle}>
           We prepare delicious food using fresh ingredients and serve every
           customer with care.
@@ -104,10 +99,10 @@ export default function AboutPage() {
             </Text>
 
             <Text style={styles.paragraph}>
-              Romano Restaurant & Coffee was created to provide fresh, healthy
-              and delicious meals in a welcoming environment. We believe
-              restaurant food should be enjoyable, reliable and prepared with
-              quality ingredients.
+              Romano Kohl was created to provide fresh, healthy and delicious
+              meals in a welcoming environment. We believe restaurant food
+              should be enjoyable, reliable and prepared with quality
+              ingredients.
             </Text>
 
             <Text style={styles.paragraph}>
@@ -183,10 +178,7 @@ export default function AboutPage() {
       </View>
 
       <View style={styles.footer}>
-        <Text style={styles.footerLogo}>
-          Romano{' '}
-          <Text style={styles.logoBlue}>Restaurant & Coffee</Text>
-        </Text>
+        <Text style={styles.footerLogo}>Romano Kohl</Text>
 
         <Text style={styles.footerText}>
           Fresh food, trusted service.
@@ -301,13 +293,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     gap: 38,
-    shadowColor: '#153F2C',
-    shadowOpacity: 0.08,
-    shadowRadius: 18,
-    shadowOffset: {
-      width: 0,
-      height: 8,
-    },
+    boxShadow: '0px 8px 18px rgba(21, 63, 44, 0.08)',
+    elevation: 4,
   },
   storyText: {
     flex: 2,
